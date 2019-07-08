@@ -27,7 +27,7 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
 const dateFormat = require('dateformat'); 
 const pretty = require('pretty-ms') 
-const prefix = 'a';
+const prefix = '$';
 var table = require('table').table
 var ti={}  
 ,spee={}
@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['ahelp','Type ahelp'];
+    var setGame = ['$help','RM System'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -2892,24 +2892,6 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 
 });
 
-client.on("message", message => {
- if (message.content === `${prefix}`) {
-  const embed = new Discord.RichEmbed() //by ,$ ReBeL ء , ??#4777 'CODES SERVER'
-      .setColor("#000000")//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
-      .setDescription(`
-${prefix}play ? لتشغيل أغنية برآبط أو بأسم
-${prefix}skip ? لتجآوز الأغنية الحآلية
-${prefix}pause ? إيقآف الأغنية مؤقتا
-${prefix}resume ? لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-${prefix}vol ? لتغيير درجة الصوت 100 - 0
-${prefix}stop ? لإخرآج البوت من الروم
-${prefix}np ? لمعرفة الأغنية المشغلة حآليا
-${prefix}queue ? لمعرفة قآئمة التشغيل
- `)//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
-   message.channel.sendEmbed(embed)//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
-    
-   }
-   });
  client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
